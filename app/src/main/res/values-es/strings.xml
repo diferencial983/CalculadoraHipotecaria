@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Calculadora Hipotecaria</string>
+
+    <string name="SalirApp">¿Desea salir de la aplicación?</string>
+
+    <string name="boton_aceptar">Aceptar</string>
+    <string name="boton_cancelar">Cancelar</string>
+
+
+    <string name="actividadMain">Actividad Main</string>
+
+    <string name="mensajePortrait">Esta es la visualización RETRATO</string>
+    <string name="mensajeLandscape">Esta es la visualización PAISAJE</string>
+</resources>

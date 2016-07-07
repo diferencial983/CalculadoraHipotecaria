@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">US Mortgage Calculator</string>
+
+    <string name="SalirApp">Do you wanna exit the application?</string>
+
+    <string name="boton_aceptar">Accept</string>
+    <string name="boton_cancelar">Cancel</string>
+
+
+    <string name="actividadMain">US Main activity description</string>
+
+    <string name="mensajePortrait">US This is PORTRAIT visualization</string>
+    <string name="mensajeLandscape">US This is LANDSCAPE visualization</string>
+</resources>

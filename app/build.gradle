@@ -1,0 +1,42 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "es.jglancho.calculadorahipotecaria"
+        minSdkVersion 19
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/* He quitado este porque es el de por defecto y ralentiza mucho la sincronización con los repositorios
+repositories {
+    maven {
+        url  "http://jcenter.bintray.com"
+    }
+}
+*/
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:24.0.0'
+    compile 'org.slf4j:slf4j-android:1.7.21'
+    /* compile 'de.mindpipe.android:android-logging-log4j:1.0.3' */
+    /* compile 'org.apache.logging.log4j:log4j:2.6.1' */
+    /*
+    compile 'com.github.tony19:logback-android-core:1.1.1-5'
+    compile 'com.github.tony19:logback-android-classic:1.1.1-5'
+    */
+}
