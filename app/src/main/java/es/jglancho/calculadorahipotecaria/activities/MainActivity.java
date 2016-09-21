@@ -20,7 +20,7 @@ public class MainActivity extends Activity {
 
     /**
      * onCreate()
-     * He introducido esta línea para probar La instalación de GIt
+     * He introducido esta línea para probar La instalación de GIT
      *
      */
     @Override
