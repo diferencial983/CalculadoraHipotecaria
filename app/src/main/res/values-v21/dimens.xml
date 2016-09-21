@@ -5,8 +5,8 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
 
-    <dimen name="nombre_app_splash">16sp</dimen>
-    <dimen name="version_app_splash">10sp</dimen>
+    <dimen name="nombre_app_splash">24sp</dimen>
+    <dimen name="version_app_splash">18sp</dimen>
 
     <dimen name="header_left_padding">16dp</dimen>
     <dimen name="header_height">192dp</dimen>

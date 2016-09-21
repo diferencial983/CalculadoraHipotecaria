@@ -1,4 +1,8 @@
-package es.jglancho.calculadorahipotecaria;
+/*
+ * Copyright (c) 2016. Junta de Castilla y León
+ */
+
+package es.jglancho.calculadorahipotecaria.activities;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -13,6 +17,8 @@ import java.util.TimerTask;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import es.jglancho.calculadorahipotecaria.R;
+
 /**
  * Creado por Javier García on 21/06/2016.
  */
@@ -23,9 +29,6 @@ public class SplashScreenActivity extends Activity {
 
     private static Logger log = LoggerFactory.getLogger(SplashScreenActivity.class);
 
-    // Definición de la fuente para la splash screen
-    private Typeface fuenteSplashScreen;
-
 
     /**
      * onCreate()
@@ -35,13 +38,14 @@ public class SplashScreenActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        log.info("Actividad " + this.getLocalClassName().toString() + " - Método " + Thread.currentThread().getStackTrace()[2].getMethodName());
+        log.info("Actividad " + this.getLocalClassName().toString()
+                + " - Método " + Thread.currentThread().getStackTrace()[2].getMethodName()
+                + " - Hilo " + Thread.currentThread().toString());
 
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.splash_screen);
 
         ejecutarTareasIniciales();
-
         irActividadPrincipal();
     }
 
@@ -70,7 +74,8 @@ public class SplashScreenActivity extends Activity {
      */
     private void ejecutarTareasIniciales() {
 
-        // Establecemos la fuente por defecto
+        Typeface fuenteSplashScreen;
+
         fuenteSplashScreen = Typeface.createFromAsset(getAssets(), "fonts/actionjackson.ttf");
 
         TextView textViewNombreApp = (TextView) findViewById(R.id.textViewNombreApp);
@@ -89,14 +94,13 @@ public class SplashScreenActivity extends Activity {
      */
     public void irActividadPrincipal() {
 
-        TimerTask task = new TimerTask() {
+        TimerTask tareaSplashScreen = new TimerTask() {
             @Override
             public void run() {
 
                 Intent mainIntent = new Intent().setClass(SplashScreenActivity.this, MainActivity.class);
                 startActivity(mainIntent);
 
-                // Finaliza la actividad Splash Screen
                 finish();
             }
         };
@@ -106,7 +110,7 @@ public class SplashScreenActivity extends Activity {
         // cuando acabe para que este continúe. Se podría ir refrescando este hilo también, mostrando
         // el avance del hilo secundario en el hilo primario.
         Timer timer = new Timer();
-        timer.schedule(task, SPLASH_SCREEN_DELAY);
+        timer.schedule(tareaSplashScreen, SPLASH_SCREEN_DELAY);
     }
 
 }
