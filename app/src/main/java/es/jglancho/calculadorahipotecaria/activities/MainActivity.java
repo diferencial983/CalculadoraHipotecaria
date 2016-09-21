@@ -20,6 +20,7 @@ public class MainActivity extends Activity {
 
     /**
      * onCreate()
+     * He introducido esta línea para probar La instalación de GIt
      *
      */
     @Override
@@ -27,7 +28,7 @@ public class MainActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        log.info("Actividad " + this.getLocalClassName().toString()
+        log.info("Actividad " + getLocalClassName()
                 + " - Método " + Thread.currentThread().getStackTrace()[2].getMethodName()
                 + " - Hilo " + Thread.currentThread().toString());
 
