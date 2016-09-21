@@ -21,6 +21,7 @@ public class MainActivity extends Activity {
     /**
      * onCreate()
      * He introducido esta línea para probar La instalación de GIT
+     * He quitado la linea anterior para seguir probando el GIT GUI
      *
      */
     @Override
